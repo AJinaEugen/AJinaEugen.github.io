@@ -5,14 +5,10 @@ function hideAllPages() {
   document.getElementById("projects").style.display = "none";
 }
 
-function showHome() {
-  document.getElementById("welcome-text").style.display = "block";
-}
-
 function showPage(id) {
   hideAllPages();
   var page = document.getElementById(id);
   page.style.display = "block";
 }
 
-showHome();
+showPage("welcome-text");
