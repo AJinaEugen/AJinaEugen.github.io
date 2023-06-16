@@ -1,6 +1,6 @@
 
 
-showHome()
+showHome();
 
 function showSkills(){
 
