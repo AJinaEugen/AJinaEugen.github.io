@@ -1,6 +1,6 @@
 
 
-showHome();
+
 
 function showSkills(){
 
@@ -33,7 +33,7 @@ document.getElementById('skill-text').style.display="none";
 
 
 
-
+showHome();
 
 
 
