@@ -1,14 +1,17 @@
-function hideAllPages() {
-  document.getElementById("skill-text").style.display = "none";
-  document.getElementById("welcome-text").style.display = "none";
-  document.getElementById("known-languages").style.display = "none";
-  document.getElementById("projects").style.display = "none";
+// global variables
+var activePage = "welcome-text";
+
+//utility functions
+function hide(id) {
+  document.getElementById(id).style.display = "none";
 }
 
 function showPage(id) {
-  hideAllPages();
+  hide(activePage);
   var page = document.getElementById(id);
   page.style.display = "block";
+  activePage = id;
 }
 
-showPage("welcome-text");
+// Code start
+showPage(activePage);
