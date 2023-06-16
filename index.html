@@ -1,107 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AJinaEndeavour</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="header">
+        <img src="alex.jfif" height="200" alt="Alexandru Jina" />
+        <div class="header-text">
+          <h1>Alexandru Jina</h1>
+          <h2>Software Tester</h2>
+          <p>Ready,set,go find <strong>bugs!!!!</strong></p>
+        </div>
+      </div>
 
+      <ul id="top-menu-bar">
+        <li id="1" onclick="showHome()"><a href="#"> Home </a></li>
 
-<header>
-    <div id="header">
-    <img src="alex.jfif" height="200" alt="Alexandru Jina">
-    <div class="header-text">
-        <h1>Alexandru Jina</h1>
-        <h2>Software Tester</h2>
-        <p>Ready,set,go find <strong>bugs!!!!</strong></p>
-    </div>
-    </div>
+        <li id="2" onclick="showSkills()"><a href="#">Skills</a></li>
 
-    <ul id="top-menu-bar">
-        <li id="1" onclick="showHome()" ><a href="#"> Home </a></li>
-    
-        <li id='2' onclick="showSkills()"><a href="#">Skills</a></li>
-    
-        <li id="3" onclick="showLanguages()" ><a href="#">Languages</a></li>
-    
-        <li id="4"><a href="#">Offers</a></li>
-    </ul> 
+        <li id="3" onclick="showLanguages()"><a href="#">Languages</a></li>
 
-</header>
+        <li id="4" onclick="showProjects()"><a href="#">Projects</a></li>
+      </ul>
+    </header>
 
-<section id="content">
-    <div id="side-menu">
+    <section id="content">
+      <div id="side-menu">
         <section>
-            
-                <h2>Contact</h2>
-                <form action="" method="get">
-                    <div>
-                    <label for="emailField">Email</label>
-                    <input type="email" name="email" id="emailField" placeholder="example@email.com" required>
-                    <br>
-                    </div>
-                    <div>
-                    <label for="nameField">Name</label>
-                    <input type="text" name="name" id="nameField" placeholder="John Doe" required>
-                    <br>
-                    <button style="margin-top: 10px;" margin type="submit">Reach out</button>
-                     </div>
-                </form>
-            
-            
-            
- 
+          <h2>Contact</h2>
+          <form action="" method="get">
+            <div>
+              <label for="emailField">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="emailField"
+                placeholder="example@email.com"
+                required
+              />
+              <br />
+            </div>
+            <div>
+              <label for="nameField">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="nameField"
+                placeholder="John Doe"
+                required
+              />
+              <br />
+              <button style="margin-top: 10px" margin type="submit">
+                Reach out
+              </button>
+            </div>
+          </form>
         </section>
-        <section id="cub"> Cub Rubik</section>
-    </div>
-    <div id="main">
-    <div id="welcome-text">Welcome</div>
-        
-    <div id="skill-text">
-        <h2>Skills</h2>
-        <ul>
+        <section id="cub">Cub Rubik</section>
+      </div>
+      <div id="main">
+        <div id="welcome-text">Welcome</div>
+
+        <div id="skill-text">
+          <h2>Skills</h2>
+          <ul>
             <li>Manual Testing</li>
             <li>Automation Testing</li>
             <li>API testing</li>
-    
-        </ul>
-    </div>
-    
-    <div id="known-languages">
-        <h2>Known Languages</h2>
-        <table border="solid">
+          </ul>
+        </div>
+
+        <div id="known-languages">
+          <h2>Known Languages</h2>
+          <table border="solid">
             <th>Language</th>
             <th>Level</th>
             <tr>
-                
-                <td>Romanian</td>
-                <td>Native</td>
+              <td>Romanian</td>
+              <td>Native</td>
             </tr>
             <tr>
-                <td>English</td>
-                <td>Advances</td>
+              <td>English</td>
+              <td>Advances</td>
             </tr>
             <tr>
-                <td>Japanese</td>
-                <td>Beginner</td>
+              <td>Japanese</td>
+              <td>Beginner</td>
             </tr>
-        </table>
-    </div>
-    </div>
-</section>
-<footer>
-    <a target="_blank" href="https://www.linkedin.com/in/alexandru-jina-675228217/">Linkedin</a>
-</footer>
+          </table>
+        </div>
 
+        <div id="projects">Projects</div>
+      </div>
+    </section>
+    <footer>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/alexandru-jina-675228217/"
+        >Linkedin</a
+      >
+    </footer>
 
-<script src="index.js"></script>
-
-
-
-
-
-
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
