@@ -5,27 +5,13 @@ function hideAllPages() {
   document.getElementById("projects").style.display = "none";
 }
 
-function showSkills() {
-  hideAllPages();
-  var page = document.getElementById("skill-text");
-  page.style.display = "block";
-}
-
 function showHome() {
-  hideAllPages();
-  var page = document.getElementById("welcome-text");
-  page.style.display = "block";
+  document.getElementById("welcome-text").style.display = "block";
 }
 
-function showLanguages() {
+function showPage(id) {
   hideAllPages();
-  var page = document.getElementById("known-languages");
-  page.style.display = "block";
-}
-
-function showProjects() {
-  hideAllPages();
-  var page = document.getElementById("projects");
+  var page = document.getElementById(id);
   page.style.display = "block";
 }
 
