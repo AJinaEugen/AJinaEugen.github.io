@@ -93,6 +93,10 @@ footer {
   background: #2d3743;
 }
 
+#top-menu-bar a.active {
+  background: #d0dcf033;
+}
+
 form {
   padding: 5px;
   border: 1px solid black;

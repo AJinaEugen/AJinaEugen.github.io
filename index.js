@@ -4,9 +4,16 @@ var activePage = "welcome-text";
 //utility functions
 function hide(id) {
   document.getElementById(id).style.display = "none";
+  let link = document.querySelector(`#top-menu-bar [data-page=${id}]`);
+  console.log(link);
+  link.classList.remove("active");
 }
 
 function showPage(id) {
+  let link = document.querySelector(`#top-menu-bar [data-page=${id}]`);
+  console.log(link);
+  link.classList.add("active");
+
   hide(activePage);
   var page = document.getElementById(id);
   page.style.display = "block";
@@ -21,6 +28,7 @@ function clickOnMenu(e) {
     "target.matches returns true or false depending if the user clicks on the coorect element",
     e.target.matches("a")
   );
+  console.log(e.target.id);
 
   var link = e.target.closest("a");
 
