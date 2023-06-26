@@ -1,0 +1,6 @@
+[
+  { "name": "Manual Testing" },
+  { "name": "Automation testing", "favorite": true },
+  { "name": "API testing", "favorite": true },
+  { "name": "JavaScript" }
+]

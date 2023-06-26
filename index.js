@@ -48,12 +48,18 @@ function clickOnMenu(e) {
   }
 }
 
-function showSkills() {
-  var skills = [
-    { name: "Manual Testing" },
-    { name: "Automation testing", favorite: true },
-    { name: "API testing", favorite: true },
-  ];
+function loadSkills() {
+  var response = fetch("skills.json");
+  var loaded = response.then(function (r) {
+    return r.json();
+  });
+  loaded.then(function (skills) {
+    showSkills(skills);
+  });
+  //..
+}
+
+function showSkills(skills) {
   var htmlSkills = skills.map(function (skill) {
     var cls = skill.favorite ? "favorite" : "";
     return `<li class="${cls}">${skill.name}</li> `;
@@ -64,4 +70,4 @@ function showSkills() {
 // Code start
 showPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
-showSkills();
+loadSkills();
