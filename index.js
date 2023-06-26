@@ -49,9 +49,14 @@ function clickOnMenu(e) {
 }
 
 function showSkills() {
-  var skills = ["Manual Testing", "Automation testing", "API testing"];
+  var skills = [
+    { name: "Manual Testing" },
+    { name: "Automation testing", favorite: true },
+    { name: "API testing", favorite: true },
+  ];
   var htmlSkills = skills.map(function (skill) {
-    return `<li>${skill}</li>`;
+    var cls = skill.favorite ? "favorite" : "";
+    return `<li class="${cls}">${skill.name}</li> `;
   });
   var skill_list = $("#skill-text ul");
   skill_list.innerHTML = htmlSkills.join("");
