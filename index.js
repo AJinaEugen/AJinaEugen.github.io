@@ -1,23 +1,30 @@
 // global variables
-var activePage = "welcome-text";
+var activePage = "skill-text";
 
 //utility functions
+
+function $(selector) {
+  return document.querySelector(selector);
+}
+
 function hide(id) {
-  document.getElementById(id).style.display = "none";
-  let link = document.querySelector(`#top-menu-bar [data-page=${id}]`);
-  console.log(link);
+  $(`#${id}`).style.display = "none";
+  let link = $(`#top-menu-bar [data-page=${id}]`);
   link.classList.remove("active");
 }
 
-function showPage(id) {
-  let link = document.querySelector(`#top-menu-bar [data-page=${id}]`);
-  console.log(link);
-  link.classList.add("active");
-
-  hide(activePage);
+function show(id) {
   var page = document.getElementById(id);
   page.style.display = "block";
   activePage = id;
+}
+
+function showPage(id) {
+  let link = $(`#top-menu-bar [data-page=${id}]`);
+  link.classList.add("active");
+
+  hide(activePage);
+  show(id);
 }
 
 function clickOnMenu(e) {
@@ -40,6 +47,16 @@ function clickOnMenu(e) {
     }
   }
 }
+
+function showSkills() {
+  var skills = ["Manual Testing", "Automation testing", "API testing"];
+  var htmlSkills = skills.map(function (skill) {
+    return `<li>${skill}</li>`;
+  });
+  var skill_list = $("#skill-text ul");
+  skill_list.innerHTML = htmlSkills.join("");
+}
 // Code start
 showPage(activePage);
-document.getElementById("top-menu-bar").addEventListener("click", clickOnMenu);
+$("#top-menu-bar").addEventListener("click", clickOnMenu);
+showSkills();
