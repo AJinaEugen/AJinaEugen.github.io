@@ -1,5 +1,5 @@
 // global variables
-var activePage = "skill-text";
+var activePage = "welcome-text";
 
 //utility functions
 
@@ -59,7 +59,16 @@ function loadSkills() {
   //..
 }
 
+function sortByEndorcements(a, b) {
+  return b.endorcement - a.endorcement;
+}
+
+function sortByName(a, b) {
+  return a.name.localeCompare(b.name);
+}
+
 function showSkills(skills) {
+  skills.sort(sortByEndorcements);
   var htmlSkills = skills.map(function (skill) {
     var cls = skill.favorite ? "favorite" : "";
     return `<li class="${cls}">${skill.name}- <span>${skill.endorcement}</span></li> `;
