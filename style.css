@@ -113,6 +113,11 @@ form {
   border-radius: 2px;
 }
 
+#skill-text span {
+  color: rgb(104, 104, 104);
+  font-size: 10px;
+}
+
 .favorite {
-  font-style: italic;
+  font-weight: bold;
 }

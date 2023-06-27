@@ -62,7 +62,7 @@ function loadSkills() {
 function showSkills(skills) {
   var htmlSkills = skills.map(function (skill) {
     var cls = skill.favorite ? "favorite" : "";
-    return `<li class="${cls}">${skill.name}</li> `;
+    return `<li class="${cls}">${skill.name}- <span>${skill.endorcement}</span></li> `;
   });
   var skill_list = $("#skill-text ul");
   skill_list.innerHTML = htmlSkills.join("");
