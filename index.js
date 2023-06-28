@@ -1,5 +1,5 @@
 // global variables
-var activePage = "welcome-text";
+let activePage = "welcome-text";
 
 //utility functions
 
@@ -9,18 +9,18 @@ function $(selector) {
 
 function hide(id) {
   $(`#${id}`).style.display = "none";
-  let link = $(`#top-menu-bar [data-page=${id}]`);
+  const link = $(`#top-menu-bar [data-page=${id}]`);
   link.classList.remove("active");
 }
 
 function show(id) {
-  var page = document.getElementById(id);
+  const page = document.getElementById(id);
   page.style.display = "block";
   activePage = id;
 }
 
 function showPage(id) {
-  let link = $(`#top-menu-bar [data-page=${id}]`);
+  const link = $(`#top-menu-bar [data-page=${id}]`);
   link.classList.add("active");
 
   hide(activePage);
@@ -31,16 +31,11 @@ function clickOnMenu(e) {
   // console.warn("click", e.target.getAttribute("page"));
 
   console.warn("click", e.target.dataset.page);
-  console.log(
-    "target.matches returns true or false depending if the user clicks on the coorect element",
-    e.target.matches("a")
-  );
-  console.log(e.target.id);
 
-  var link = e.target.closest("a");
+  const link = e.target.closest("a");
 
   if (link) {
-    let id = link.dataset.page;
+    const id = link.dataset.page;
 
     if (e.target.matches("a")) {
       showPage(id);
@@ -49,14 +44,13 @@ function clickOnMenu(e) {
 }
 
 function loadSkills() {
-  var response = fetch("skills.json");
-  var loaded = response.then(function (r) {
+  const response = fetch("skills.json");
+  const loaded = response.then(function (r) {
     return r.json();
   });
   loaded.then(function (skills) {
     showSkills(skills);
   });
-  //..
 }
 
 function sortByEndorcements(a, b) {
@@ -69,11 +63,11 @@ function sortByName(a, b) {
 
 function showSkills(skills) {
   skills.sort(sortByEndorcements);
-  var htmlSkills = skills.map(function (skill) {
-    var cls = skill.favorite ? "favorite" : "";
+  const htmlSkills = skills.map(function (skill) {
+    const cls = skill.favorite ? "favorite" : "";
     return `<li class="${cls}">${skill.name}- <span>${skill.endorcement}</span></li> `;
   });
-  var skill_list = $("#skill-text ul");
+  const skill_list = $("#skill-text ul");
   skill_list.innerHTML = htmlSkills.join("");
 }
 // Code start

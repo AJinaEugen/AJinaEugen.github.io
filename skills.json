@@ -1,6 +1,6 @@
 [
-  { "name": "Manual Testing", "endorcement": 0 },
+  { "name": "Manual Testing", "endorcement": 14 },
   { "name": "Automation testing", "endorcement": 15, "favorite": true },
-  { "name": "API testing", "endorcement": 18, "favorite": true },
+  { "name": "API testing", "endorcement": 18 },
   { "name": "JavaScript", "endorcement": 20, "favorite": true }
 ]
