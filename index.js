@@ -1,6 +1,16 @@
 // global variables
 let activePage = "welcome-text";
 
+(function () {
+  const hash = document.location.hash.substring(1);
+  if (hash) {
+    const link = $(`#top-menu-bar [data-page=${hash}`);
+    if (link) {
+      activePage = hash;
+    }
+  }
+})();
+
 //utility functions
 
 function $(selector) {
@@ -17,6 +27,7 @@ function show(id) {
   const page = document.getElementById(id);
   page.style.display = "block";
   activePage = id;
+  document.location.href = `#${id}`;
 }
 
 function showPage(id) {
