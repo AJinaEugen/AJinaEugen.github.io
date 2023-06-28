@@ -45,12 +45,9 @@ function clickOnMenu(e) {
 
 function loadSkills() {
   const response = fetch("skills.json");
-  const loaded = response.then((r) => {
-    return r.json();
-  });
-  loaded.then((skills) => {
-    showSkills(skills);
-  });
+  const loaded = response.then((r) => r.json());
+
+  loaded.then(showSkills);
 }
 
 function sortByEndorcements(a, b) {
